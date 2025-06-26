@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="theme-wrapper" class="light">
+  <!-- Header/Navigation -->
+  <header class="site-header">
+    <div class="container-custom">
+      <div class="flex items-center justify-between py-4">
+        <a href="#" class="text-2xl font-bold" style="text-decoration: none;"><span class="Portfolioo">Portfolio</span></a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-2">
+          <ul class="flex space-x-2">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#work" class="nav-link">Work</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+        </nav>
+
+        <!-- Mobile Menu Controls -->
+        <div class="md:hidden flex items-center gap-2">
+          <button id="theme-toggle-mobile" class="rounded-full p-2" aria-label="Toggle theme">
+            <svg id="sun-icon-mobile" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-200 hidden"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg id="moon-icon-mobile" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+          <button id="mobile-menu-toggle" class="text-foreground" aria-label="Toggle mobile menu">
+            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-background py-4 shadow-md border-t border-border">
+      <nav class="container-custom">
+        <ul class="flex flex-col space-y-2">
+          <li><a href="#about" class="nav-link block mobile-nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link block mobile-nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link block mobile-nav-link">Projects</a></li>
+          <li><a href="#work" class="nav-link block mobile-nav-link">Work</a></li>
+          <li><a href="#contact" class="nav-link block mobile-nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-16 bg-gradient-to-br from-navy-50 to-blue-50 hero">
+      <div class="container-custom">
+        <div class="grid md:grid-cols-2 gap-12 items-center hero-content">
+          <div class="order-2 md:order-1 hero-text">
+            <h1 class="text-4xl lg:text-6xl font-bold mb-4 text-navy-900">
+              <span class="block">Hello , I am</span>
+              <span class="text-5xl lg:text-7xl text-navy-600 name">Parvez</span>
+            </h1>
+
+            <div class="flex flex-wrap gap-2 mb-6 role-tags">
+              <span class="px-4 py-1 bg-navy-100 text-navy-700 rounded-full">Web Developer</span>
+              <span class="px-4 py-1 bg-teal-100 text-teal-700 rounded-full">UI/UX Designer</span>
+              <span class="px-4 py-1 bg-purple-100 text-navy-900 rounded-full">Machine Learning Enthusiast</span>
+            </div>
+
+            <p class="text-lg text-gray-700 mb-8 max-w-lg hero-description">
+              Building beautiful, functional, and user-centric digital experiences
+              with code, creativity, and a passion for innovation.
+            </p>
+
+            <div class="flex flex-wrap gap-4 hero-buttons">
+              <a href="#projects" class="btn-primary">
+                View Projects
+              </a>
+              <a href="#contact" class="btn-outline">
+                Get in Touch
+              </a>
+            </div>
+          </div>
+
+          <div class="order-1 md:order-2 flex justify-center hero-image">
+            <div class="relative image-container">
+              <div
+                class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-navy-500 to-teal-500 absolute blur-3xl opacity-20">
+              </div>
+              <div class="relative bg-white p-4 rounded-2xl shadow-lg rotate-3">
+                <img src='you.jpg' alt="Developer working on code"
+                  class="w-full h-auto rounded-lg" />
+                <div class="absolute -bottom-4 -right-4 bg-white p-2 rounded-lg shadow-md code-snippet">
+                  <code
+                    class="text-sm text-navy-700">console.log('<span class="text-teal-500">Hello World!</span>')</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-white about">
+      <div class="container-custom">
+        <div class="mb-12 text-center section-header">
+          <h2 class="text-3xl font-bold mb-4 inline-block">
+            <span class="relative">
+              About Me
+              <span class="absolute -bottom-1 left-0 right-0 h-1 bg-teal-400"></span>
+            </span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center about-content">
+          <div class="space-y-6 about-text">
+            <p class="text-lg">
+              I'm a creative developer passionate about building clean, user-friendly
+              websites and interfaces. With a strong foundation in frontend technologies
+              and design principles, I create digital experiences that look great and
+              perform even better.
+            </p>
+
+            <p class="text-lg">
+              Beyond traditional web development, I'm also exploring the exciting world
+              of machine learning to create smart, data-driven solutions that solve
+              real-world problems.
+            </p>
+
+            <p class="text-lg">
+              When I'm not coding, you'll find me exploring new technologies, sketching
+              UI concepts, or contributing to open-source projects. I believe in continuous
+              learning and pushing the boundaries of what's possible in tech.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 traits-grid">
+            <div class="bg-navy-50 p-6 rounded-lg shadow-sm trait-card navy">
+              <h3 class="text-xl font-bold mb-2 text-navy-700">Problem Solver</h3>
+              <p class="text-gray-700">I enjoy tackling complex challenges and finding elegant solutions.</p>
+            </div>
+
+            <div class="bg-teal-50 p-6 rounded-lg shadow-sm trait-card teal">
+              <h3 class="text-xl font-bold mb-2 text-teal-700">Design Thinker</h3>
+              <p class="text-gray-700">I approach problems with users at the center of every decision.</p>
+            </div>
+
+            <div class="bg-teal-50 p-6 rounded-lg shadow-sm trait-card teal">
+              <h3 class="text-xl font-bold mb-2 text-teal-700">Tech Enthusiast</h3>
+              <p class="text-gray-700">I'm constantly learning and adapting to new technologies.</p>
+            </div>
+
+            <div class="bg-navy-50 p-6 rounded-lg shadow-sm trait-card navy">
+              <h3 class="text-xl font-bold mb-2 text-navy-700">Team Player</h3>
+              <p class="text-gray-700">I thrive in collaborative environments with diverse perspectives.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding  bg-gradient-to-br from-navy-50 to-blue-50 skills">
+      <div class="container-custom">
+        <div class="mb-12 text-center">
+          <h2 class="text-3xl font-bold mb-4 inline-block">
+            <span class="relative">
+              Skills
+              <span class="absolute -bottom-1 left-0 right-0 h-1 bg-teal-400"></span>
+            </span>
+          </h2>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto section-description">
+            My technical toolkit spans across various domains, allowing me to tackle projects from multiple angles.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 skills-grid">
+          <div class="bg-white p-6 rounded-lg shadow-sm skill-category">
+            <h3 class="text-2xl font-bold mb-4 text-navy-700">
+              Frontend
+            </h3>
+            <div class="flex flex-wrap gap-2 skill-tags">
+              <span class="skill-badge">HTML</span>
+              <span class="skill-badge">CSS</span>
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">Bootstrap</span>
+              <span class="skill-badge">Responsive Design</span>
+              <span class="skill-badge">Web Accessibility</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm skill-category">
+            <h3 class="text-2xl font-bold mb-4 text-navy-700">
+              UI/UX
+            </h3>
+            <div class="flex flex-wrap gap-2 skill-tags">
+              <span class="skill-badge">Figma</span>
+              <span class="skill-badge">Canva</span>
+              <span class="skill-badge">Prototyping</span>
+              <span class="skill-badge">User Research</span>
+              <span class="skill-badge">Visual Design</span>
+              <span class="skill-badge">Interaction Design</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm skill-category">
+            <h3 class="text-2xl font-bold mb-4 text-navy-700">
+              ML
+            </h3>
+            <div class="flex flex-wrap gap-2 skill-tags">
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">scikit-learn</span>
+              <span class="skill-badge">TensorFlow</span>
+              <span class="skill-badge">Data Visualization</span>
+              <span class="skill-badge">Model Deployment</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm skill-category">
+            <h3 class="text-2xl font-bold mb-4 text-navy-700">
+              Tools
+            </h3>
+            <div class="flex flex-wrap gap-2 skill-tags">
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">VS Code</span>
+              <span class="skill-badge">Jupyter Notebook</span>
+              <span class="skill-badge">Lovable.ai</span>
+              <span class="skill-badge">cursor</span>
+              <span class="skill-badge">npm</span>
+              <span class="skill-badge">Webpack</span>
+              <span class="skill-badge">Chrome DevTools</span>
+              <span class="skill-badge">PowerBi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-white projects">
+      <div class="container-custom">
+        <div class="mb-12 text-center">
+          <h2 class="text-3xl font-bold mb-4 inline-block">
+            <span class="relative">
+              Projects
+              <span class="absolute -bottom-1 left-0 right-0 h-1 bg-teal-400"></span>
+            </span>
+          </h2>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            A showcase of my recent projects that demonstrate my technical skills and creative problem-solving.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 projects-grid">
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow project-card">
+            <div class="h-48 overflow-hidden project-image">
+              <img src="bl.png"
+                alt="Digital payment terminal interface"
+                class="w-full h-full object-cover object-center transition-all duration-300 hover:scale-105" />
+            </div>
+            <div class="p-6 project-content">
+              <h3 class="text-xl font-bold mb-2 text-foreground">Fingroop</h3>
+              <p class="text-foreground/70 mb-4"> Machine learning system that predicts blood groups from fingerprint patterns.</p>
+              <div class="flex flex-wrap gap-2 project-tags">
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">User-Friendly</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Deep learning</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Innovation</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Booking System</span>
+                <a href="https://stringer.neocities.org/bloodgroup-predictor/" class="btn-pro">Checkout</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow project-card">
+            <div class="h-48 overflow-hidden project-image">
+              <img src="hotel.jpg"
+                alt="Facial recognition security interface"
+                class="w-full h-full object-cover object-center transition-all duration-300 hover:scale-105" />
+            </div>
+            <div class="p-6 project-content">
+              <h3 class="text-xl font-bold mb-2 text-foreground">Oasis</h3>
+              <p class="text-foreground/70 mb-4">My first e-commerce website for room booking.</p>
+              <div class="flex flex-wrap gap-2 project-tags">
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Basic HTML , CSS & JavaScript</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Premium</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Fundamental</span>
+                <a href="https://stringer.neocities.org/Full%20stack/room/style" class="btn-pro">Checkout</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow project-card">
+            <div class="h-48 overflow-hidden project-image">
+              <img src="sd.png"
+                alt="Facial recognition security interface"
+                class="w-full h-full object-cover object-center transition-all duration-300 hover:scale-105" />
+            </div>
+            <div class="p-6 project-content">
+              <h3 class="text-xl font-bold mb-2 text-foreground">Cafesta</h3>
+              <p class="text-foreground/70 mb-4">An e-commerce website inspired from Barista website</p>
+              <div class="flex flex-wrap gap-2 project-tags">
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Basic HTML , CSS & JavaScript</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Premium</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Fundamental</span>
+                <a href="https://stringer.neocities.org/Full%20stack/cafesta/" class="btn-pro">Checkout</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow project-card">
+            <div class="h-48 overflow-hidden project-image">
+              <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095"
+                alt="Facial recognition security interface"
+                class="w-full h-full object-cover object-center transition-all duration-300 hover:scale-105" />
+            </div>
+            <div class="p-6 project-content">
+              <h3 class="text-xl font-bold mb-2 text-foreground">FareFace</h3>
+              <p class="text-foreground/70 mb-4">Face-recognition login system with advanced security features</p>
+              <div class="flex flex-wrap gap-2 project-tags">
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Facial
+                  Recognition</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Python</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">OpenCV</span>
+                 <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Payment gateway</span>
+                <a href="https://stringer.neocities.org/Full%20stack/facefare/ " class="btn-pro">Checkout</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow project-card">
+            <div class="h-48 overflow-hidden project-image">
+              <img src="bb.png"
+                alt="Facial recognition security interface"
+                class="w-full h-full object-cover object-center transition-all duration-300 hover:scale-105" />
+            </div>
+            <div class="p-6 project-content">
+              <h3 class="text-xl font-bold mb-2 text-foreground">ITion</h3>
+              <p class="text-foreground/70 mb-4">A website where users can register for courses.</p>
+              <div class="flex flex-wrap gap-2 project-tags">
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Educational </span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Accessible</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Organized</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">User-Friendly</span>
+                <a href="https://stringer.neocities.org/Full%20stack/poster/" class="btn-pro">Checkout</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow project-card">
+            <div class="h-48 overflow-hidden project-image">
+              <img src="brain.jpg"
+                alt="Map showing mechanic locations on a mobile app"
+                class="w-full h-full object-cover object-center transition-all duration-300 hover:scale-105" />
+            </div>
+
+            <div class="p-6 project-content">
+              <h3 class="text-xl font-bold mb-2 text-foreground">NeuroCare AI</h3>
+              <p class="text-foreground/70 mb-4">Brain MRI diagnosis website with neural network-powered analysis tools
+              </p>
+              <div class="flex flex-wrap gap-2 project-tags">
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Healthcare</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Neural
+                  Networks</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">TensorFlow</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Medical Imaging</span>
+                <a href="https://stringer.neocities.org/Full%20stack/nueroweb/" class="btn-pro">Checkout</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow project-card">
+            <div class="h-48 overflow-hidden project-image">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                alt="Map showing mechanic locations on a mobile app"
+                class="w-full h-full object-cover object-center transition-all duration-300 hover:scale-105" />
+            </div>
+
+            <div class="p-6 project-content">
+              <h3 class="text-xl font-bold mb-2 text-foreground">PayVend AI</h3>
+              <p class="text-foreground/70 mb-4">It is a smart vending machine with AI and weight sensors for
+                secure purchases.</p>
+              <div class="flex flex-wrap gap-2 project-tags">
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Hiddy AI Model</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Payment
+                  processing</span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Hardware/sensors </span>
+                <span class="px-2 py-1 bg-muted text-muted-foreground text-xs font-medium rounded">Secure</span>
+                <a href="#projects"  onclick="window.open('payvend.pdf', '_blank')" class="btn-pro">Checkout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Product Posters Section -->
+    <section id="product-posters" class="section-padding bg-gradient-to-br from-navy-50 to-blue-50 posters">
+      <div class="container-custom">
+        <div class="mb-12 text-center">
+          <h2 class="text-3xl font-bold mb-4 inline-block">
+            <span class="relative">
+              Product Posters
+              <span class="absolute -bottom-1 left-0 right-0 h-1 bg-teal-400"></span>
+            </span>
+          </h2>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            A collection of visually engaging product posters designed for various brands and concepts.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 posters-grid">
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow poster-card">
+            <div class="h-64 overflow-hidden poster-image">
+              <img src="f.jpg" alt="Deconstruct Gel Sunscreen Poster" class="w-full h-full object-cover object-center transition-all duration-300 hover:scale-105" />
+            </div>
+            <div class="p-6 poster-content">
+              <h3 class="text-xl font-bold mb-2 text-foreground">Deconstruct Gel Sunscreen</h3>
+              <p class="text-foreground/70 mb-4">A modern poster for a gentle yet effective sunscreen, highlighting its lightweight, non-greasy formula and broad spectrum protection.</p>
+            </div>
+          </div>
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow poster-card">
+            <div class="h-64 overflow-hidden poster-image">
+              <img src="ff.jpg" alt="NeuroCare AI Poster" class="w-full h-full object-cover object-center transition-all duration-300 hover:scale-105" />
+            </div>
+            <div class="p-6 poster-content">
+              <h3 class="text-xl font-bold mb-2 text-foreground">NeuroCare AI</h3>
+              <p class="text-foreground/70 mb-4">Poster for a neurological care platform, emphasizing advanced AI-powered MRI analysis and high accuracy in diagnostics.</p>
+            </div>
+          </div>
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow poster-card">
+            <div class="h-64 overflow-hidden poster-image">
+              <img src="fff.jpg" alt="Puma Next-Gen Power Bat Poster" class="w-full h-full object-cover object-center transition-all duration-300 hover:scale-105" />
+            </div>
+            <div class="p-6 poster-content">
+              <h3 class="text-xl font-bold mb-2 text-foreground">Puma Next-Gen Power Bat</h3>
+              <p class="text-foreground/70 mb-4">A dynamic poster for Puma's cricket bat, showcasing its power, control, and innovative design for professional performance.</p>
+            </div>
+          </div>
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow poster-card">
+            <div class="h-64 overflow-hidden poster-image">
+              <img src="ffff.jpg" alt="Rimberio Perfume Store Poster" class="w-full h-full object-cover object-center transition-all duration-300 hover:scale-105" />
+            </div>
+            <div class="p-6 poster-content">
+              <h3 class="text-xl font-bold mb-2 text-foreground">Rimberio Perfume Store</h3>
+              <p class="text-foreground/70 mb-4">A modern, elegant poster for Rimberio's artisan perfume series, featuring 0% alcohol, unisex appeal, and a long-lasting, non-sticky formula. Special 25% sale offer highlighted.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- <section id="testimonials" class="section-padding bg-gradient-to-br from-navy-50 to-blue-50">
+      <div class="container-custom">
+        <div class="mb-12 text-center">
+          <h2 class="text-3xl font-bold mb-4 inline-block">
+            <span class="relative">
+              Testimonials
+              <span class="absolute -bottom-1 left-0 right-0 h-1 bg-teal-400"></span>
+            </span>
+          </h2>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            What people say about working with me
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+         
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow testimonial-card">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="John Doe" class="w-12 h-12 rounded-full object-cover mr-4 profile-image">
+                <div>
+                  <h3 class="text-xl font-bold">John Doe</h3>
+                  <p class="text-muted-foreground">Senior Developer</p>
+                </div>
+              </div>
+              <p class="text-foreground/70 mb-4">"Working with Parvez was an absolute pleasure. His attention to detail and problem-solving skills are exceptional. He delivered the project on time and exceeded our expectations."</p>
+              <div class="flex gap-1 stars">
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+              </div>
+            </div>
+          </div>
+
+         
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow testimonial-card">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Sarah Smith" class="w-12 h-12 rounded-full object-cover mr-4 profile-image">
+                <div>
+                  <h3 class="text-xl font-bold">Sarah Smith</h3>
+                  <p class="text-muted-foreground">Product Manager</p>
+                </div>
+              </div>
+              <p class="text-foreground/70 mb-4">"Parvez's technical expertise and creative approach to problem-solving made our project a success. His communication skills and ability to understand client needs are remarkable."</p>
+              <div class="flex gap-1 stars">
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover glow testimonial-card">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover mr-4 profile-image">
+                <div>
+                  <h3 class="text-xl font-bold">Michael Chen</h3>
+                  <p class="text-muted-foreground">Startup Founder</p>
+                </div>
+              </div>
+              <p class="text-foreground/70 mb-4">"Parvez's work on our startup's MVP was outstanding. He not only delivered high-quality code but also provided valuable insights that helped shape our product's direction."</p>
+              <div class="flex gap-1 stars">
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Recent Work Section -->
+    <section id="work" class="section-padding  bg-gradient-to-br from-navy-50 to-blue-50  work">
+      <div class="container-custom">
+        <div class="mb-12 text-center">
+          <h2 class="text-3xl font-bold mb-4 inline-block">
+            <span class="relative">
+              Latest Blog Posts
+              <span class="absolute -bottom-1 left-0 right-0 h-1 bg-teal-400"></span>
+            </span>
+          </h2>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            A collection of my recent research & works.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 work-grid">
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="WheelVolt Project" />
+            </div>
+            <div class="blog-content">
+              <span class="blog-category">Hybrid Model</span>
+              <h3 class="blog-title">WheelVolt</h3>
+              <p class="blog-description">A hybrid model combining traditional and modern approaches for efficient energy management.</p>
+              <div class="blog-meta">
+                <div class="blog-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>5 min read</span>
+                </div>
+                <div class="blog-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span>Mar 15, 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="fish.jpg" alt="NeuroCare AI Project" />
+            </div>
+            <div class="blog-content">
+              <span class="blog-category">E-Commerce</span>
+              <h3 class="blog-title">AquaCatch.AI</h3>
+              <p class="blog-description">Predicts fish types using location-based intelligent AI system.</p>
+              <div class="blog-meta">
+                <div class="blog-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>6 min read</span>
+                </div>
+                <div class="blog-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span>Feb 4, 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img id="modal-image" src="" alt="Enlarged work">
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-white contact">
+      <div class="container-custom">
+        <div class="mb-12 text-center">
+          <h2 class="text-3xl font-bold mb-4 inline-block">
+            <span class="relative">
+              Get in Touch
+              <span class="absolute -bottom-1 left-0 right-0 h-1 bg-teal-400"></span>
+            </span>
+          </h2>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            Have a project in mind or just want to say hello? I'd love to hear from you!
+          </p>
+        </div>
+
+        <div class="flex justify-center">
+          <div class="contact-info text-center">
+            <h3 class="text-2xl font-bold mb-4 text-navy-700">Let's Talk</h3>
+            <p class="mb-6 text-gray-700">
+              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            </p>
+            <div class="space-y-4 contact-methods">
+              <div class="flex flex-col items-center contact-method">
+                <div class="w-12 h-12 rounded-full bg-navy-100 flex items-center justify-center mb-2 icon-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-navy-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div class="contact-text">
+                  <h4 class="text-sm text-gray-500 font-medium">Email</h4>
+                  <p class="text-navy-700">parvezahamed700@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex flex-col items-center contact-method">
+                <div class="w-12 h-12 rounded-full bg-navy-100 flex items-center justify-center mb-2 icon-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-navy-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                  </svg>
+                </div>
+                <div class="contact-text">
+                  <h4 class="text-sm text-gray-500 font-medium">Let's connect</h4>
+                  <div class="flex justify-center space-x-4 mt-1 social-links">
+                    <a href="https://www.linkedin.com/in/parvez-ahamed-953717309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " class="text-gray-600 hover:text-navy-600">
+                      <span class="sr-only">LinkedIn</span>
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-navy-900 text-white py-12 site-footer">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row justify-between items-center footer-content">
+        <div class="mb-6 md:mb-0 footer-info">
+          <h2 class="text-2xl font-bold mb-2">Parvez</h2>
+          <p class="text-gray-300 max-w-md">
+            Frontend Web Developer | UI/UX Designer | Machine Learning Enthusiast
+          </p>
+        </div>
+
+        <div class="flex space-x-6 footer-social">
+         
+          <a href="https://www.linkedin.com/in/parvez-ahamed-953717309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " class="text-gray-300 hover:text-white transition-colors">
+            <span class="sr-only">LinkedIn</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
+            </svg>
+          </a>
+         
+        </div>
+      </div>
+
+      <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm footer-bottom">
+        <p>&copy; <span id="current-year"></span> Stringer. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
